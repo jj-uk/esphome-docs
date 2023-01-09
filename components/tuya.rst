@@ -102,12 +102,12 @@ If the log ``status: pin`` is any other value:
 
   - If the WiFi module is a **Tuya** ESP-based WiFi module: set ``status_pin`` to the value shown in the logs.
 
-  - If the WiFi module is **NOT** a **Tuya** ESP-based WiFi module (e.g. DIY replacement): see :ref:`tuya-status_pin_configuration_diy_module_replacement`.
+  - If the WiFi module is **NOT** a **Tuya** ESP-based WiFi module (e.g. DIY replacement): see :ref:`tuya-diy_module_replacement_status_pin_configuration`.
 
-.. _tuya-status_pin_configuration_diy_module_replacement:
+.. _tuya-diy_module_replacement_status_pin_configuration:
 
-DIY-replacement Module Status Pin Configuration
-***********************************************
+DIY Module Replacement: Status Pin Configuration
+************************************************
 
 .. note::
 

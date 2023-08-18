@@ -215,17 +215,19 @@ Using :ref:`config-lambda`, you can call class methods to perform advanced funct
 .. note:: 
   Only the members listed below are supported. Calling any other tuya class member function is not supported and may cause unpredictable results.
 
-- **.set_status_update_mode_manual(void)**: WiFi status will not be sent to the Tuya MCU when the network status changes. The user can control the WiFi status message by calling ``force_wifi_status(*int state*)``.
+- **.query_datapoints(void)**: Read datapoints from Tuya-MCU. Datapoints are usually updated periodically. Use this to update them at once.
+
+- **.set_status_update_mode_manual(void)**: WiFi status will not be sent to the Tuya MCU when the network status changes. The user can control the WiFi status message by calling ``set_wifi_status(*int state*)``.
 
 - **.set_status_update_mode_auto(void)**: WiFi status messages reflect the current network status.
 
-- **.force_wifi_status(int state)**: Sends a user-defined WiFi status update message to the Tuya-MCU. 
+- **.set_wifi_status(int state)**: Sends a user-defined WiFi status update message to the Tuya-MCU. 
   Use to inform the Tuya-MCU of the network state. E.g. Can be used to toggle the WiFi icon (if the device has one) on and off etc.
   Note that the configured ``status_mode`` will be changed to ``manual`` when this Lambda is called.
   ``state`` can be 0 (no network) or 1 (network connected) when ``status_pin`` is defined, otherwise valid values are 0 to 5.
   See `Tuya Serial Port Specification - Report Network Status <https://developer.tuya.com/en/docs/iot/tuya-cloud-universal-serial-port-access-protocol?id=K9hhi0xxtn9cb#title-9-Report%20network%20status>`__ for further details.
 
-- **.send_default_time(void)** : Sets the device date/time to ``2020:01:01 00:00:00`` (which was a Saturday). Useful for debugging.
+- **.reset_time(void)** : Sets the device date/time to ``2020:01:01 00:00:00`` (which was a Saturday). Useful for debugging.
 
 
 See Also
